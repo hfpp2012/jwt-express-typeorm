@@ -12,7 +12,7 @@ export class Comment extends Base {
 
   @ManyToOne(
     () => User,
-    user => user.posts,
+    user => user.comments,
     { eager: true }
   )
   @JoinColumn({ name: "user_id" })
